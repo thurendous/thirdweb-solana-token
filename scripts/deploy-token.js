@@ -5,7 +5,10 @@ config()
 const { PRIVATE_KEE } = process.env
 
 // initiate the SDK and pass in a signer
-const sdk = ThirdwebSDK.fromPrivateKey('devnet', PRIVATE_KEE)
+const sdk = ThirdwebSDK.fromPrivateKey(
+    'https://api.devnet.solana.com',
+    PRIVATE_KEE
+)
 
 // Define the metadata for your program
 const metadata = {
